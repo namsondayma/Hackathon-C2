@@ -115,7 +115,19 @@ for (int j = i; j < lenStdList - 1; j++)
             }
             break;
         case 5:
-        	break;
+            for (int i = 0; i < lenStdList - 1; i++)
+            {
+                for (int j = 0; j < lenStdList - i - 1; j++)
+                {
+                    if (studentList[j].name[0] > studentList[j + 1].name[0])
+                    {
+                        std temp = studentList[j];
+                        studentList[j] = studentList[j + 1];
+                        studentList[j + 1] = temp;
+                    }
+                }
+            }
+            break;
         case 6:
         	break;
         case 7:
